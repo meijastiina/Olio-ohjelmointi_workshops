@@ -9,36 +9,39 @@ namespace WS1_1_Car
         // Attributes (fields)
         // = private instance variables to store object data
         // Visible within class
-        private string Model;
-        private string PlateNumber;
-        private int MaxSpeed;
-        private int CurrentSpeed;
-        private int FuelCapacity;
-        private int RemainingFuel;
+        // Typically name in lowerCamelCase, starting with an underscore
+        private string _model; 
+        private string _plateNumber;
+        private int _maxSpeed;
+        private int _currentSpeed;
+        private int _fuelCapacity;
+        private int _remainingFuel;
 
-        // Constructor
+        // Constructor: no return value, not even void
+        // Same name as the class
+        // Parameters: Accepts plate number as a string as an input variable
         public Car(string inputPlateNumber)
         {
-            PlateNumber = inputPlateNumber;
+            _plateNumber = inputPlateNumber;
         }
 
         // Methods
         // Sets the current speed to this instance
         public void SetCurrentSpeed(int targetSpeed)
         {
-            CurrentSpeed = targetSpeed;
+            _currentSpeed = targetSpeed;
         }
 
         // Gets current speed of this instance
         public int CheckCurrentSpeed()
         {
-            return CurrentSpeed;
+            return _currentSpeed;
         }
 
         // Gets plate number of this instance
         public string GetPlateNumber()
         {
-            return PlateNumber;
+            return _plateNumber;
         }
     }
 }
