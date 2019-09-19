@@ -12,26 +12,23 @@ namespace WS3_Cars_With_List
             cars.Add(new Car("HGR-987")); // To add items we use Add method.
             cars.Add(new Car("EFX-395"));
             cars.Add(new Car("EFX-395"));
+            int averageSpeed = 0;
             //After the list is initialized, the program asks from the user via the command prompt the speed for each car, and sets the speed for the car calling the method SetCurrentSpeed
-            for (int i = 0; i < cars.Count; i++) // Instead of length, for lists we use count
+            foreach ( Car car in cars) // Instead of for loop, let's use foreach
             {
-                Console.Write($"Enter the speed of car { cars[i].GetPlateNumber() }: ");
+                Console.Write($"Enter the speed of car { car.GetPlateNumber() }: ");
                 //If the user has provided an invalid speed (SetCurrentSpeed returns “false”), the program will notify that the speed is invalid and will ask the speed again
-                while (!cars[i].SetCurrentSpeed(int.Parse(Console.ReadLine())))
+                while (!car.SetCurrentSpeed(int.Parse(Console.ReadLine())))
                 {
                     Console.WriteLine("Invalid speed!");
-                    Console.Write($"Enter the speed of car { cars[i].GetPlateNumber() }: ");
+                    Console.Write($"Enter the speed of car { car.GetPlateNumber() }: ");
                 }
+                //After all the speeds are successfully set, the program will calculate the speed average of all three cars and print to the screen:“The average speed of cars is xxx Km/h”
+                averageSpeed += car.CheckCurrentSpeed(); //Let's refactor a little and calculate the sum here so we don't need two loops.
             }
-            //After all the speeds are successfully set, the program will calculate the speed average of all three cars and print to the screen:“The average speed of cars is xxx Km/h”
-            int averageSpeed = 0;
-            for (int i = 0; i < cars.Count; i++)
-            {
-                // Let's sum up all car speeds
-                averageSpeed += cars[i].CheckCurrentSpeed();
-            }
+
             // Let's divide the sum by the number of cars.
-            averageSpeed = averageSpeed / cars.Count;
+            averageSpeed = averageSpeed / cars.Count; // Instead of length, here we use Count.
             Console.WriteLine($"The average speed of cars is { averageSpeed } Km/h");
         }
     }
