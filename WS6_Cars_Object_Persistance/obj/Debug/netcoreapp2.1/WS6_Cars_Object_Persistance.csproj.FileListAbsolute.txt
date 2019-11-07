@@ -1,0 +1,9 @@
+C:\Users\k5000620\source\repos\meijastiina\Olio-ohjelmointi_workshops\WS6_Cars_Object_Persistance\bin\Debug\netcoreapp2.1\WS6_Cars_Object_Persistance.deps.json
+C:\Users\k5000620\source\repos\meijastiina\Olio-ohjelmointi_workshops\WS6_Cars_Object_Persistance\bin\Debug\netcoreapp2.1\WS6_Cars_Object_Persistance.runtimeconfig.json
+C:\Users\k5000620\source\repos\meijastiina\Olio-ohjelmointi_workshops\WS6_Cars_Object_Persistance\bin\Debug\netcoreapp2.1\WS6_Cars_Object_Persistance.runtimeconfig.dev.json
+C:\Users\k5000620\source\repos\meijastiina\Olio-ohjelmointi_workshops\WS6_Cars_Object_Persistance\bin\Debug\netcoreapp2.1\WS6_Cars_Object_Persistance.dll
+C:\Users\k5000620\source\repos\meijastiina\Olio-ohjelmointi_workshops\WS6_Cars_Object_Persistance\bin\Debug\netcoreapp2.1\WS6_Cars_Object_Persistance.pdb
+C:\Users\k5000620\source\repos\meijastiina\Olio-ohjelmointi_workshops\WS6_Cars_Object_Persistance\obj\Debug\netcoreapp2.1\WS6_Cars_Object_Persistance.AssemblyInfoInputs.cache
+C:\Users\k5000620\source\repos\meijastiina\Olio-ohjelmointi_workshops\WS6_Cars_Object_Persistance\obj\Debug\netcoreapp2.1\WS6_Cars_Object_Persistance.AssemblyInfo.cs
+C:\Users\k5000620\source\repos\meijastiina\Olio-ohjelmointi_workshops\WS6_Cars_Object_Persistance\obj\Debug\netcoreapp2.1\WS6_Cars_Object_Persistance.dll
+C:\Users\k5000620\source\repos\meijastiina\Olio-ohjelmointi_workshops\WS6_Cars_Object_Persistance\obj\Debug\netcoreapp2.1\WS6_Cars_Object_Persistance.pdb
