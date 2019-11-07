@@ -13,10 +13,12 @@ namespace WS6_Cars_Object_Persistance
         private const string PASSWORD = "postgres";
         private const string DB = "cars";
         private const string CONNECTION_STRING = "Host=" + HOST + ";Username=" + USERNAME + ";Password=" + PASSWORD + ";Database=" +  DB;
+        // Connection is private and gets opened in the constructor and used in all the db transactions
         static private NpgsqlConnection connection;
         static private NpgsqlCommand selectAllCars = null;
         static private NpgsqlCommand insertCar = null;
 
+        // Constructor: creates the connection to the db
         static CarQueries()
         {
             try
@@ -25,13 +27,13 @@ namespace WS6_Cars_Object_Persistance
                connection.Open(); // Here we open connection
             } catch (NpgsqlException ex)
             {
-                // An exception !! Handle me correctly
                 throw new NpgsqlException($"Error in database connection ({ ex.Message }).");
             }
         
         }
 
-        static public List<Vehicle> getAllCars()
+        // GetAllCars gets all the cars from the database into a generic list
+        static public List<Vehicle> GetAllCars()
         {
             List<Vehicle> list = new List<Vehicle>();
             using (selectAllCars = new NpgsqlCommand("SELECT * FROM cars", connection))
@@ -52,6 +54,7 @@ namespace WS6_Cars_Object_Persistance
             return list;
         }
 
+        // AddCar adds a car to DB
         static public void AddCar(Vehicle car)
         {
             using (insertCar = new NpgsqlCommand("INSERT INTO Cars(platenr, colour, model, year) " +
